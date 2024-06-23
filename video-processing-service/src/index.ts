@@ -16,13 +16,13 @@ app.post('/process-video',(req, res)=>{
     }
 
     ffmpeg(inputFilePath)
-        .outputOptions('-vf', 'scale=-1:360') //360p
+        .outputOptions('-vf', 'scale=-1:1080') //360 / 720
         .on('end', ()=>{
             console.log('Processed successfully');
             res.status(200).send('Processed successfully');
         })
         .on('error', (err)=>{
-            console.log('Error: ', err.message)
+            console.log('Error: ', err.message, err)
             res.status(500).send(`Internal Server Error: ${err.message}`)
         })
         .save(outputFilePath);

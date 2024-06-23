@@ -1,0 +1,9 @@
+conversion for test-dog-vine.mp4 to 
+    360p fails. [ffmpeg exited with code 3752568763] -- probably due to bitrate/fps.
+    720p fails. [same error]
+    1080p success.
+
+conversion for test.mp4
+    360p success.
+    720p success.
+    1080p success.
